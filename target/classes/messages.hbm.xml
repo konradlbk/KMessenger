@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="pl.szulc.konrad.app.pojo_entities">
+
+    <class name="Message" table="messages" >
+        <id name="id" column="m_id" access="field">
+
+            <generator class="identity"/>
+        </id>
+
+
+
+        <property name="content" type="string" access="field" column="m_content"/>
+        <property name="sender" type="string" access="field" />
+        <property name="receiver" type="string" access="field" column="m_receiver"/>
+        <property name="sendDate" type="string" access="field" column="send_date"/>
+    </class>
+</hibernate-mapping>
